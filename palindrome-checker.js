@@ -1,5 +1,9 @@
 module.exports = function (str) {
-  str = str.toLowerCase()
-  let v =str.split('').reverse().join('')
-  return v
+  var h = str.replace(/[^A-Z0-9]/ig, "").toLowerCase();
+  let v =h.split('').reverse().join('')
+  if(h === v){
+    return true;
+  }else{
+    return false;
+  }
 }
